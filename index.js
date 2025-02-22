@@ -96,7 +96,7 @@ app.get("/integration.json", (req, res) => {
         }
       ],
       "target_url": "",
-      "tick_url": `{baseUrl}/tick`,
+      "tick_url": `${baseUrl}/tick`,
     }
   });
 });
