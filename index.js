@@ -27,6 +27,8 @@ async function getRandomMeal() {
       image: meal.strMealThumb,
       url: meal.strSource,
     };
+
+
   } catch (error) {
     console.error("Error fetching meal from API:", error);
     return null;
@@ -40,7 +42,25 @@ async function mealSuggestionTask(payload) {
   }
 //   console.log(meal);
 
-  const message = `Today's meal suggestion: **${meal.name}**\nCategory: ${meal.category}\n\n*Instructions:* ${meal.instructions}\n\n[View Recipe](${meal.url})\n\n![Meal Image](${meal.image})`;
+const message = `Today's meal suggestion: **${meal.name}**\nCategory: ${meal.category}\n\n*Instructions:* ${meal.instructions}\n\n[View Recipe](${meal.url})\n\n![Meal Image](${meal.image})`;
+
+const data = {
+    event_name: "Meal Suggestion",
+    message: message,
+    status: "success",
+    username: "Meals Suggestor"
+  };
+
+const response = await axios.post(payload.return_url, data, {
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    }
+  });
+
+  console.log('Webhook sent successfully:', response.data);
+
+  
 
   console.log(message);
 
@@ -56,11 +76,11 @@ async function mealSuggestionTask(payload) {
   }
 }
 
-app.post("/tick", (req, res) => {
+app.post("/tick", async (req, res) => {
   const payload = req.body;
   console.log(payload);
 
-  mealSuggestionTask(payload);
+  await mealSuggestionTask(payload);
 
   res.status(202).json({ status: "accepted" });
 });
