@@ -33,35 +33,33 @@ Returns the integration schema for the Telex interval integration.
 ```json
 {
   "data": {
-      "date": {
-        "created_at": "2025-02-22",
-        "updated_at": "2025-02-22"
-      },
-      "descriptions": {
-        "app_name": "Daily Meal Suggestion",
-        "app_description": "Suggests a random meal daily.",
-        "app_logo": "https://dcassetcdn.com/design_img/375573/141837/141837_3031164_375573_image.jpg",
-        "app_url": "https://deployed-app.com",
-        "background_color": "#fff"
-      },
-      "is_active": true,
-      "integration_category": "Communication & Collaboration",
-      "integration_type": "interval",
-      "key_features": [
-        "Daily random meal suggestion"
-      ],
-      "author": "Kumar Rishi",
-      "settings": [
-        {
-          "label": "interval",
-          "type": "text",
-          "required": true,
-          "default": "*/3 * * * *"
-        }
-      ],
-      "target_url": "",
-      "tick_url": "https://deployed-app.com/tick",
-    }
+    "date": {
+      "created_at": "2025-02-22",
+      "updated_at": "2025-02-22"
+    },
+    "descriptions": {
+      "app_name": "Daily Meal Suggestion",
+      "app_description": "Suggests a random meal daily.",
+      "app_logo": "https://dcassetcdn.com/design_img/375573/141837/141837_3031164_375573_image.jpg",
+      "app_url": "https://deployed-app.com",
+      "background_color": "#fff"
+    },
+    "is_active": true,
+    "integration_category": "Communication & Collaboration",
+    "integration_type": "interval",
+    "key_features": ["Daily random meal suggestion"],
+    "author": "Kumar Rishi",
+    "settings": [
+      {
+        "label": "interval",
+        "type": "text",
+        "required": true,
+        "default": "*/3 * * * *"
+      }
+    ],
+    "target_url": "",
+    "tick_url": "https://deployed-app.com/tick"
+  }
 }
 ```
 
@@ -87,9 +85,13 @@ Returns the integration schema for the Telex interval integration.
 
 ```json
 {
-  "status": "success",
+  "status": "success"
 }
 ```
+
+## Screenshot
+
+![Alt text](./assets/hng_3_!.PNG)
 
 ## Contributing
 
