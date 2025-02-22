@@ -48,9 +48,9 @@ const data = {
     event_name: "Meal Suggestion",
     message: message,
     status: "success",
-    username: "Meals Suggestor"
+    username: "Meal Suggestion Bot"
   };
-
+try {
 const response = await axios.post(payload.return_url, data, {
     headers: {
       "Accept": "application/json",
@@ -64,13 +64,7 @@ const response = await axios.post(payload.return_url, data, {
 
   console.log(message);
 
-  try {
-    await axios.post(payload.return_url, {
-      message: message,
-      username: "Meal Suggestion Bot",
-      event_name: "Meal Suggestion",
-      status: "success",
-    });
+  
   } catch (error) {
     console.error("Error sending message:", error);
   }
