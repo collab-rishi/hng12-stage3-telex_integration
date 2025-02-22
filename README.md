@@ -9,8 +9,8 @@ A Telex interval integration that suggests random meals on certain time interval
 ## Installation
 
 ```bash
-git clone https://github.com/collab-rishi/hng12-stage3-telex_integration.git
-cd hng12-stage3-telex_integration
+git clone https://github.com/telexintegrations/random_meal_suggestor.git
+cd random_meal_suggestor
 npm install
 ```
 
