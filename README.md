@@ -87,7 +87,7 @@ Returns the integration schema for the Telex interval integration.
 
 ```json
 {
-  "status": success,
+  "status": "success",
 }
 ```
 
