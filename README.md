@@ -41,7 +41,7 @@ Returns the integration schema for the Telex interval integration.
         "app_name": "Daily Meal Suggestion",
         "app_description": "Suggests a random meal daily.",
         "app_logo": "https://dcassetcdn.com/design_img/375573/141837/141837_3031164_375573_image.jpg",
-        "app_url": baseUrl,
+        "app_url": "https://deployed-app.com",
         "background_color": "#fff"
       },
       "is_active": true,
@@ -60,7 +60,7 @@ Returns the integration schema for the Telex interval integration.
         }
       ],
       "target_url": "",
-      "tick_url": `{baseUrl}/tick`,
+      "tick_url": "https://deployed-app.com/tick",
     }
 }
 ```
